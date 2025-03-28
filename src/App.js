@@ -1,21 +1,12 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { MantineProvider, Button, Container } from "@mantine/core";
-import DiscordTextGenerator from "./DiscordTextGenerator";
+import React from "react";
+import MediaEditor from "./MediaEditor";
 
 function App() {
   return (
-    <MantineProvider withGlobalStyles withNormalizeCSS>
-      <Router>
-        <Container>
-          <Button component={Link} to="/" mt="md">Home</Button>
-          <Button component={Link} to="/discord" mt="md" ml="sm">Discord Text Generator</Button>
-          <Routes>
-            <Route path="/" element={<h1>Welcome to Home</h1>} />
-            <Route path="/discord" element={<DiscordTextGenerator />} />
-          </Routes>
-        </Container>
-      </Router>
-    </MantineProvider>
+    <div>
+      <h1 className="text-center text-2xl font-bold p-4">Media Editor</h1>
+      <MediaEditor />
+    </div>
   );
 }
 
